@@ -12,20 +12,20 @@ export default function OrderTable({ order_items }) {
   }, 0);
 
   return (
-    <div className="overflow-x-auto w-full bg-table-gray border-l-2">
-      <table className="min-w-full bg-white">
-        <thead className="bg-table-gray text-gray-400">
+    <div className="bg-table-gray border-l-2  overflow-y-auto ">
+      <table className="bg-white lg:min-w-full">
+        <thead className="bg-table-gray text-gray-400 gap-3">
           <tr>
-            <th className="py-2 px-4 border-b border-gray-300 text-left text-sm font-normal">
+            <th className="border-b px-1 py-1 md:py-2 md:px-3 border-gray-300 text-left text-sm font-normal">
               Ürün
             </th>
-            <th className="py-2 px-4 border-b border-gray-300 text-left text-sm font-normal">
+            <th className="border-b px-1 text-center border-gray-300 text-sm font-normal">
               Maliyet
             </th>
-            <th className="py-2 px-4 border-b border-gray-300 text-left text-sm font-normal">
+            <th className="border-b px-1 md:px-3 text-center border-gray-300 text-sm font-normal">
               Miktar
             </th>
-            <th className="py-2 px-4 border-b border-gray-300 text-left text-sm font-normal">
+            <th className="border-b px-1 md:py-2 md:px-3 text-center border-gray-300 text-sm font-normal">
               Toplam
             </th>
           </tr>
@@ -34,7 +34,7 @@ export default function OrderTable({ order_items }) {
           {order_items.map((order, index) => {
             return (
               <tr key={index} className="hover:bg-gray-100">
-                <td className="py-3 px-4 border-b border-gray-300 flex items-center">
+                <td className="py-2 px-3 border-b border-gray-300 flex items-center">
                   <img
                     src={order.img}
                     alt={order.product_name}
@@ -42,18 +42,18 @@ export default function OrderTable({ order_items }) {
                   />
                   <a
                     href="#"
-                    className="text-sky-600 underline text-xs md:text-base"
+                    className="text-sky-600 underline text-xs md:text-sm"
                   >
                     {order.product_name}
                   </a>
                 </td>
-                <td className="py-2 px-4 border-b border-gray-300 text-xs md:text-base">
+                <td className="border-b border-gray-300 text-center text-xs md:text-sm">
                   ₺{order.unit_cost}
                 </td>
-                <td className="py-2 px-4 border-b border-gray-300 text-xs md:text-base">
+                <td className="border-b border-gray-300 text-center text-xs md:text-sm">
                   x {order.quantity}
                 </td>
-                <td className="py-2 px-4 border-b border-gray-300 text-xs md:text-base">
+                <td className="border-b border-gray-300  text-center text-xs md:text-sm">
                   ₺{order.total_cost}
                 </td>
               </tr>

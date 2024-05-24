@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Message from "./Message";
 import NoteArea from "./NoteArea";
 
-export default function Messages({ messages }) {
+export default function Messages({ messages, setData }) {
+
   return (
     <>
       <div>
@@ -23,7 +25,9 @@ export default function Messages({ messages }) {
           })}
 
           <hr className="mt-3" />
-          <NoteArea />
+          <NoteArea
+            setData={setData}
+          />
         </div>
       </div>
     </>

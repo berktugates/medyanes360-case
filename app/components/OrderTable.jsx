@@ -61,7 +61,7 @@ export default function OrderTable({ order_items }) {
           })}
         </tbody>
       </table>
-      <div id="total-orders" className="bg-white mt-2">
+      <div id="total-orders" className="bg-white mt-2 p-4">
         <div className="flex flex-wrap justify-between items-center p-3">
           <div className="flex items-center">
             <svg
@@ -107,15 +107,15 @@ export default function OrderTable({ order_items }) {
           <p className="w-2/3 text-sm  text-gray-400">{productNames}</p>
         </div>
       </div>
-      <div className="my-4 flex flex-col items-end me-4">
-        <div className="flex gap-16">
-          <p>Öğe alt toplamı :</p> <p>₺{totalCost}</p>
+      <div className="my-8 flex flex-col gap-y-4 items-end me-4">
+        <div className="flex">
+          <p className="me-8">Öğe alt toplamı :</p> <p>₺{totalCost}</p>
         </div>
-        <div className="flex gap-24">
-          <p>Gönderim :</p> <p>₺0,00</p>
+        <div className="flex">
+          <p className="me-9">Gönderim :</p> <p>₺0,00</p>
         </div>
-        <div className="flex gap-16">
-          <p>Sipariş toplamı :</p> <p>₺{totalCost}</p>
+        <div className="flex">
+          <p className="me-8">Sipariş toplamı :</p> <p>₺{totalCost}</p>
         </div>
       </div>
     </div>

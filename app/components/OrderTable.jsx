@@ -2,7 +2,7 @@ export default function OrderTable({ order_items }) {
   // product isimlerini aralarında boşluk olacak şekilde yan yana sıralanması için
   const productNames = order_items
     .map((order) => {
-      return order.product_name;
+      return `${order.product_name} x${order.quantity}`;
     })
     .join(" ");
 

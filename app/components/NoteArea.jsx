@@ -35,7 +35,7 @@ export default function NoteArea({ setData }) {
               onChange={(e) =>
                 setMessage({ ...message, message: e.target.value })
               }
-              className="w-full border rounded-md"
+              className="w-full border rounded-md max-h-32 "
             ></textarea>
           </div>
           <div className="flex mt-3 gap-2">

@@ -7,15 +7,14 @@ import OrderUpdateForm from "./components/OrderUpdateForm";
 import Messages from "./components/Messages";
 import OrderTable from "./components/OrderTable";
 import { dummyData } from "@/dummyData";
+import NoteArea from "./components/NoteArea";
 
 export default function Home() {
   const [data, setData] = useState(dummyData);
   return (
     <>
       <div id="container" className="h-screen flex justify-center">
-        <div
-          className="sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-1/2"
-        >
+        <div className="sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-1/2">
           <div className="flex flex-col lg:flex-row border-b-text-gray border-b-4">
             <div
               id="left-part"
@@ -63,6 +62,7 @@ export default function Home() {
             >
               <div id="messages-box">
                 <Messages messages={data.messages} setData={setData} />
+                <NoteArea setData={setData} />
               </div>
             </div>
           </div>

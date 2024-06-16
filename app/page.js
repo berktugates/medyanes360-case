@@ -32,7 +32,7 @@ export default function Home() {
                   status={data.order_status.order_status}
                 />
               </div>
-              <div id="order-details-box" className="mt-2">
+              <div id="order-details-box" className="mt-2 border-b-2">
                 <Label value={"Sipariş Detayları"} />
                 <div id="order-details-table">
                   <CustomerDetailTable
@@ -44,8 +44,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div id="order-update-box">
-                <Label value={"Sipariş Durumunu Güncelle"} />
+              <div id="order-update-box" className="mt-4">
                 <div className="flex justify-center my-2">
                   <OrderUpdateForm
                     date={data.order_status.order_date}

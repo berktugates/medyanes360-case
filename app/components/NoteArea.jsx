@@ -9,7 +9,7 @@ export default function NoteArea({ setData }) {
 
   const handleAddMessage = () => {
     if (message.message == null || message.message == "") {
-      alert("Boş özel not gönderemezsiniz!")
+      alert("Boş özel not gönderemezsiniz!");
     } else {
       setData((prevData) => ({
         ...prevData,
@@ -17,14 +17,14 @@ export default function NoteArea({ setData }) {
       }));
     }
     setMessage({
-      role:"",
+      role: "",
       message: "",
       date: new Date().toLocaleDateString,
     });
   };
   return (
     <>
-      <div className="mt-3">
+      <div className="mt-3 mx-1">
         <div id="header-div" className="mt-1">
           <h1>Not Ekle</h1>
         </div>
@@ -35,16 +35,13 @@ export default function NoteArea({ setData }) {
               onChange={(e) =>
                 setMessage({ ...message, message: e.target.value })
               }
-              className="w-full border rounded-md max-h-32 "
+              className="w-full border rounded-md max-h-36 resize-none"
             ></textarea>
           </div>
-          <div className="flex mt-3 gap-2">
-            <select className="block appearance-none  bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
-              <option>Özel Not</option>
-            </select>
+          <div className="flex mt-2 gap-2 float-right me-1">
             <button
               onClick={handleAddMessage}
-              className="border-blue-400 border p-1 rounded-md text-blue-600 hover:text-white hover:bg-blue-400 hover:scale-105 hover:transition-all"
+              className="bg-sky-600 text-white border py-1.5 px-2 rounded-md hover:bg-sky-700 hover:scale-105 hover:transition-all hover:duration-500 hover:ease-in-out"
             >
               Ekle
             </button>

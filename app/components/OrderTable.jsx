@@ -2,7 +2,7 @@ export default function OrderTable({ order_items }) {
   // product isimlerini aralarında boşluk olacak şekilde yan yana sıralanması için
   const productNames = order_items
     .map((order) => {
-      return `${order.product_name} x${order.quantity}`;
+      return `${order.product_name} x${order.quantity}  |`;
     })
     .join(" ");
 
@@ -14,7 +14,7 @@ export default function OrderTable({ order_items }) {
   return (
     <div className="bg-table-gray border-l-2  overflow-y-auto ">
       <table className="bg-white lg:min-w-full">
-        <thead className="bg-table-gray text-gray-400 gap-3">
+        <thead className="bg-table-header text-white gap-3">
           <tr>
             <th className="border-b px-1 py-1 md:py-2 md:px-3 border-gray-300 text-left text-sm font-normal">
               Ürün
@@ -79,23 +79,23 @@ export default function OrderTable({ order_items }) {
                 strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
-                {" "}
                 <path
                   d="M2 7C2 5.89543 2.89543 5 4 5H16C17.1046 5 18 5.89543 18 7V18H4C2.89543 18 2 17.1046 2 16V7Z"
-                  fill="#B3B3B3"
-                ></path>{" "}
+                  fill="#D4C2CF"
+                ></path>
                 <path
                   d="M18 13L21.5 13C21.7761 13 22 13.2239 22 13.5V18H18V13Z"
-                  fill="#B3B3B3"
-                ></path>{" "}
-                <circle cx="7" cy="19" r="2" fill="#B3B3B3"></circle>{" "}
-                <circle cx="17" cy="19" r="2" fill="#B3B3B3"></circle>{" "}
+                  fill="#D4C2CF"
+                ></path>
+                <circle cx="7" cy="19" r="2" fill="#D4C2CF"></circle>
+                <circle cx="17" cy="19" r="2" fill="#D4C2CF"></circle>
                 <path
                   d="M17 19C17 18.7348 17.1054 18.4804 17.2929 18.2929C17.4804 18.1054 17.7348 18 18 18H20V14H18V19Z"
-                  fill="#B3B3B3"
-                ></path>{" "}
+                  fill="#D4C2CF"
+                ></path>
               </g>
             </svg>
+
             <p className="text-sm md:text-base">Ücretsiz Kargo</p>
           </div>
           <div>
@@ -109,13 +109,18 @@ export default function OrderTable({ order_items }) {
       </div>
       <div className="my-8 flex flex-col gap-y-4 items-end me-4">
         <div className="flex">
-          <p className="me-8">Öğe alt toplamı :</p> <p>₺{totalCost}</p>
+          <p className="me-8 font-semibold text-base">Öğe alt toplamı :</p>{" "}
+          <p>₺{totalCost}</p>
         </div>
         <div className="flex">
-          <p className="me-9">Gönderim :</p> <p>₺0,00</p>
+          <p className="me-9 text-sm">Gönderim :</p> <p>₺0,00</p>
         </div>
         <div className="flex">
-          <p className="me-8">Sipariş toplamı :</p> <p>₺{totalCost}</p>
+          <p className="me-9 text-sm">KDV :</p> <p>₺0,00</p>
+        </div>
+        <div className="flex">
+          <p className="me-8 text-lg font-bold">Sipariş toplamı :</p>{" "}
+          <p>₺{totalCost}</p>
         </div>
       </div>
     </div>

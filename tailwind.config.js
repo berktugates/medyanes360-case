@@ -12,7 +12,7 @@ module.exports = {
         "text-gray": "#333333",
         "background-gray": "#F4F4F4", 
         "message-pink" : "#D4C2CF",
-        "table-gray" : "#F4F4F4",
+        "table-header" : "#394c69",
       },
     },
   },

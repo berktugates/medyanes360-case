@@ -39,7 +39,7 @@ export default function OrderUpdateForm({ date, status, setData }) {
         <div className="flex items-center justify-between">
           <h2 className="md:text-lg font-medium mb-4">Genel</h2>
           <button
-            className="bg-sky-600 text-white font-medium py-1 md:py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-sky-700 hover:scale-105 hover:transition-all"
+            className="bg-sky-600 text-white font-medium py-1 md:py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-sky-700 hover:scale-105 hover:transition-all hover:duration-500 hover:ease-in-out"
             type="button"
             onClick={handleUpdate}
           >

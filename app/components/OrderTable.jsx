@@ -12,9 +12,9 @@ export default function OrderTable({ order_items }) {
   }, 0);
 
   return (
-    <div className="bg-table-gray border-l-2  overflow-y-auto ">
-      <table className="bg-white lg:min-w-full">
-        <thead className="bg-table-header text-white gap-3">
+    <div className="bg-table-gray overflow-y-auto lg:border lg:border-gray-300 lg:shadow-md lg:rounded-xl lg:p-4">
+      <table className="bg-white w-full">
+        <thead className="text-gray-500 gap-3">
           <tr>
             <th className="border-b px-1 py-1 md:py-2 md:px-3 border-gray-300 text-left text-sm font-normal">
               Ürün
@@ -81,17 +81,17 @@ export default function OrderTable({ order_items }) {
               <g id="SVGRepo_iconCarrier">
                 <path
                   d="M2 7C2 5.89543 2.89543 5 4 5H16C17.1046 5 18 5.89543 18 7V18H4C2.89543 18 2 17.1046 2 16V7Z"
-                  fill="#D4C2CF"
+                  fill="#0369A1"
                 ></path>
                 <path
                   d="M18 13L21.5 13C21.7761 13 22 13.2239 22 13.5V18H18V13Z"
-                  fill="#D4C2CF"
+                  fill="#0369A1"
                 ></path>
-                <circle cx="7" cy="19" r="2" fill="#D4C2CF"></circle>
-                <circle cx="17" cy="19" r="2" fill="#D4C2CF"></circle>
+                <circle cx="7" cy="19" r="2" fill="#0369A1"></circle>
+                <circle cx="17" cy="19" r="2" fill="#0369A1"></circle>
                 <path
                   d="M17 19C17 18.7348 17.1054 18.4804 17.2929 18.2929C17.4804 18.1054 17.7348 18 18 18H20V14H18V19Z"
-                  fill="#D4C2CF"
+                  fill="#0369A1"
                 ></path>
               </g>
             </svg>

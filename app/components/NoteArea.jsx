@@ -41,7 +41,7 @@ export default function NoteArea({ setData }) {
           <div className="flex mt-2 gap-2 float-right me-1">
             <button
               onClick={handleAddMessage}
-              className="bg-sky-600 text-white border py-1.5 px-2 rounded-md hover:bg-sky-700 hover:scale-105 hover:transition-all hover:duration-500 hover:ease-in-out"
+              className="bg-sky-600 text-white border py-1.5 px-2 mb-2 rounded-md hover:bg-sky-700 hover:scale-105 hover:transition-all hover:duration-500 hover:ease-in-out"
             >
               Ekle
             </button>

@@ -14,11 +14,11 @@ export default function Home() {
   return (
     <>
       <div id="container" className="h-screen flex justify-center">
-        <div className="sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-1/2">
-          <div className="flex flex-col lg:flex-row border-b-text-gray border-b-4">
+        <div className="mx-2 md:mx-8 lg:mx-12">
+          <div className="flex flex-col lg:flex-row lg:mt-4 lg:gap-2">
             <div
               id="left-part"
-              className="lg:border-r-4 border-b-text-gray border-r-text-gray lg:w-2/3 w-full"
+              className="lg:w-2/3 w-full lg:border lg:border-gray-300 lg:shadow-md lg:rounded-xl lg:p-4"
             >
               <div
                 id="order-top-box"
@@ -54,10 +54,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <hr className="w-2 md:block hidden" />
             <div
               id="right-part"
-              className="lg:w-1/3 w-full border-r-2 border-t-2 "
+              className="lg:w-1/3 w-full lg:border lg:border-gray-300 lg:shadow-md lg:rounded-xl lg:p-4"
             >
               <div id="messages-box">
                 <Messages messages={data.messages} setData={setData} />
@@ -65,7 +64,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="lg:mt-3">
             <OrderTable order_items={data.order_items} />
           </div>
         </div>
